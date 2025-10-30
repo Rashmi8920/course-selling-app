@@ -172,10 +172,7 @@ const Home = () => {
           </h1>  <br /><br />
           <p className='text-gray-500'>Sharpen your skills with courses crefted by experts</p>
           <div className='flex flex-col  sm:ml-0 ml-10 sm:flex-row items-center justify-center space-x-4 gap-4 mt-8 '>
-            {/* <Link to={'/courses'} 
-                        className='bg-green-600 text-white p-2 md:py-3 md:px-6   rounded font-semibold hover:bg-white duration-300 hover:text-black  px-7'>
-                            explore courses
-                            </Link> */}
+      
             {isUserLogeddIn ? (
               <Link to={"/courses"}
                 className="bg-green-600 text-white p-2 md:py-3 md:px-6 rounded font-semibold hover:bg-white duration-300 hover:text-black px-7"
@@ -203,7 +200,7 @@ const Home = () => {
           <p className='font-bold sm:text-4xl text-3xl  mb-7 sm:ml-8 ml-22 font-serif'>Our Courses</p>
           <Slider {...settings}>
             {courses.map((course) => (
-              <div className='p-4 z-5 mt-[-12px] sm:ml-0 ml-4' key={course._id} >
+              <div className='p-4 z-5 mt-[-12px] ' key={course._id} >
                 <div className='relative border -shrink-0 sm:w-80 w-60 z-5  tracking duration-300 sm:p-0 transform hover:scale-105 sm:ml-4 ml-7'>
                   <div className='bg-gray-900 z-5 rounded-lg overflow-hidden '>
                     <img className='mt-1 h-32 z-5 w-full object-contain' src={course?.image?.url} alt="" />
@@ -280,3 +277,4 @@ const Home = () => {
 
 
 export default Home
+
